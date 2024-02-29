@@ -5,6 +5,7 @@ import {useTelegram} from "./hooks/useTelegram";
 import { Route, Routes } from "react-router-dom";
 import ProductList from "./components/ProductList/ProductList";
 import AboutUs from "./components/AboutUs/AboutUs";
+import Details from "./components/Details/Details";
 
 function App() {
     const { tg } = useTelegram();
@@ -20,6 +21,7 @@ function App() {
         <Routes>
             <Route index element={<ProductList />} />
             <Route path={"about-us"} element={<AboutUs />} />
+            <Route path={"/:id"} element={<Details />} />
         </Routes>
     </div>
   );

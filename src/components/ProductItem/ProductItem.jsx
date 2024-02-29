@@ -1,8 +1,14 @@
 import React from 'react';
 import "./ProductItem.css"
 import Button from "../Button/Button";
+import {useNavigate} from "react-router-dom";
 
 const ProductItem = ({ product, className }) => {
+    const navigate = useNavigate();
+    const changePage = () => {
+        navigate(`/${product.id}`, { state: product })
+    };
+
     return (
         <div className={"product " + className}>
             <div>
@@ -16,7 +22,7 @@ const ProductItem = ({ product, className }) => {
                 </div>
             </div>
             <div>
-                <Button className={"add-btn"}>Подробности</Button>
+                <Button className={"add-btn"} onClick={changePage}>Подробности</Button>
             </div>
         </div>
     );

@@ -11,7 +11,7 @@ const products = [
         url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Lamborghini_Urus_20180306_Genf_2018.jpg/2560px-Lamborghini_Urus_20180306_Genf_2018.jpg",
     },
     {
-        id: 1,
+        id: 2,
         title: "Lamborghini Urus",
         price: 100,
         description: "Бензин, 4000 см3",
