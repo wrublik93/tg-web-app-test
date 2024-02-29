@@ -10,12 +10,12 @@ function App() {
 
     useEffect(() => {
         tg.ready();
-    }, []);
+    }, [tg]);
 
 
   return (
     <div className="App">
-        {/*<Header />*/}
+        <Header />
         <button onClick={onToggleButton}>toogle</button>
     </div>
   );
