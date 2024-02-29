@@ -11,14 +11,14 @@ const Details = () => {
     };
 
     return (
-        <div>
+        <div style={{ padding: 10 }}>
             <div>
                 Details:
             </div>
             <div>
                 {state?.title}
             </div>
-            <div>
+            <div style={{ paddingBottom: 10 }}>
                 {state?.description}
             </div>
             <Button onClick={onClick}>Go back</Button>
