@@ -1,7 +1,6 @@
 import React from 'react';
 import "./ProductItem.css"
 import Button from "../Button/Button";
-import BudImg from "../../assets/Bud.png"
 
 const ProductItem = ({ product, className }) => {
     return (
