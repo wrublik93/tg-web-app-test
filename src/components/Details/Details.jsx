@@ -12,8 +12,8 @@ const Details = () => {
 
     return (
         <div style={{ padding: 10 }}>
-            <div>
-                Details:
+            <div style={{ paddingBottom: 10 }}>
+                <b>Details:</b>
             </div>
             <div>
                 {state?.title}
