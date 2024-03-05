@@ -10,7 +10,8 @@ const Details = () => {
 
     const onClick = useCallback(() => {
         navigate("/");
-    }, [navigate]);
+        tg.BackButton.isVisible = false;
+    }, [navigate, tg]);
 
     useEffect(() => {
         tg.BackButton.isVisible = true;
