@@ -12,6 +12,7 @@ function App() {
 
     useEffect(() => {
         tg.ready();
+        tg.BackButton.isVisible = false;
     }, [tg]);
 
 

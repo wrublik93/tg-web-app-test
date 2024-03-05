@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useCallback, useEffect} from 'react';
 import {useLocation, useNavigate} from "react-router-dom";
 import Button from "../Button/Button";
 import {useTelegram} from "../../hooks/useTelegram";
@@ -8,13 +8,14 @@ const Details = () => {
     const navigate = useNavigate();
     const { tg } = useTelegram();
 
-    const onClick = () => {
+    const onClick = useCallback(() => {
         navigate("/");
-    };
+    }, [navigate]);
 
     useEffect(() => {
         tg.BackButton.isVisible = true;
-    }, [tg]);
+        tg.BackButton.onClick = onClick;
+    }, [tg, onClick]);
 
     return (
         <div style={{ padding: 10 }}>
