@@ -14,9 +14,7 @@ const Details = () => {
 
     useEffect(() => {
         tg.BackButton.isVisible = true;
-        tg.BackButton.onEvent("backButtonClicked", () => {
-            onClick();
-        });
+        tg.BackButton.onEvent("backButtonClicked", onClick);
     }, [tg, onClick]);
 
     return (
