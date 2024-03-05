@@ -1,14 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useLocation, useNavigate} from "react-router-dom";
 import Button from "../Button/Button";
+import {useTelegram} from "../../hooks/useTelegram";
 
 const Details = () => {
     const { state } = useLocation();
     const navigate = useNavigate();
+    const { tg } = useTelegram();
 
     const onClick = () => {
         navigate("/");
     };
+
+    useEffect(() => {
+        tg.BackButton.isVisible = true;
+    }, [tg]);
 
     return (
         <div style={{ padding: 10 }}>
